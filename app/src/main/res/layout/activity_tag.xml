@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_tag_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.flyanywhere.ui.TagActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ProgressBar
+        android:id="@+id/pb_tag_progress-Bar"
+        android:layout_width="@dimen/progressBarWidth"
+        android:layout_height="@dimen/progressBarHeight"
+        android:layout_gravity="center" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_tag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/marginLarge"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_check" />
+
+    <com.miguelcatalan.materialsearchview.MaterialSearchView
+        android:id="@+id/sv_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

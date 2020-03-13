@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/cardMarginVertical"
+        android:layout_marginEnd="@dimen/cardMarginHorizontal"
+        android:layout_marginLeft="@dimen/cardMarginHorizontal"
+        android:layout_marginRight="@dimen/cardMarginHorizontal"
+        android:layout_marginStart="@dimen/cardMarginHorizontal"
+        android:layout_marginTop="@dimen/cardMarginVertical"
+        app:cardCornerRadius="8dp"
+        android:background="@android:color/white"
+        android:minHeight="100dp">
+
+        <ProgressBar
+            android:id="@+id/pb_info_progress_bar"
+            android:layout_width="@dimen/progressBarWidth"
+            android:layout_height="@dimen/progressBarHeight"
+            android:layout_gravity="center" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_info_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/paddingLarge"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/marginMedium"
+                android:text="@string/info_item_header_text"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textMedium" />
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textAlignment="viewStart"
+                android:textDirection="locale"
+                android:layout_marginBottom="@dimen/marginMedium"
+                android:textColor="@color/lightGrey"
+                android:textSize="@dimen/textSmall" />
+
+            <TextView
+                android:id="@+id/tv_tags_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_item_edit_tags_text"
+                android:textColor="@drawable/button_selector"
+                android:textSize="@dimen/textSmall" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

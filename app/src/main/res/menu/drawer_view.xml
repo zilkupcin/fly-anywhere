@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_browse"
+            android:icon="@drawable/ic_view_list"
+            android:title="Browse" />
+        <item
+            android:id="@+id/nav_credits"
+            android:icon="@drawable/ic_human_handsup"
+            android:title="Credits" />
+        <item
+            android:id="@+id/nav_edit_tags"
+            android:icon="@drawable/ic_tag"
+            android:title="Edit tags" />
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@drawable/ic_logout"
+            android:title="Sign out" />
+    </group>
+</menu>

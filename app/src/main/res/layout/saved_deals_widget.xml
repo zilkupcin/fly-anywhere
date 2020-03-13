@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#60000000"
+    android:orientation="vertical"
+
+    android:padding="@dimen/widget_margin">
+
+    <TextView
+        android:id="@+id/tv_widget_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:background="#80000000"
+        android:gravity="center"
+        android:padding="@dimen/paddingMedium"
+        android:text="@string/widget_header_text"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textMedium" />
+
+    <ListView
+        android:id="@+id/lv_saved_deals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/paddingMedium"
+        android:text="@string/widget_empty_listview_text"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textMedium" />
+
+</LinearLayout>

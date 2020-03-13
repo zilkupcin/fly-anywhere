@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/marginMedium"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_deal_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dealItemHeight">
+
+        <ImageView
+            android:id="@+id/iv_deal_header_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:contentDescription="@string/cd_widget_list_item_header_image"
+            android:scaleType="centerCrop" />
+
+
+        <TextView
+            android:id="@+id/tv_deal_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginLarge"
+            android:background="@drawable/flight_type_tag_bg"
+            android:paddingBottom="@dimen/paddingDealType"
+            android:paddingEnd="@dimen/paddingLarge"
+            android:paddingLeft="@dimen/paddingLarge"
+            android:paddingRight="@dimen/paddingLarge"
+            android:paddingStart="@dimen/paddingLarge"
+            android:paddingTop="@dimen/paddingDealType"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textExtraSmall" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_deal_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="start"
+        android:textAlignment="viewStart"
+        android:textDirection="locale"
+        android:padding="@dimen/paddingLarge"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textMedium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <ImageView
+                android:id="@+id/iv_departure_icon"
+                android:layout_width="@dimen/iconWidth"
+                android:layout_height="@dimen/iconHeight"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/marginLarge"
+                android:layout_marginLeft="@dimen/marginLarge"
+                android:layout_marginRight="@dimen/marginLarge"
+                android:layout_marginStart="@dimen/marginLarge"
+                android:contentDescription="@string/cd_departures_icon"
+                android:src="@drawable/ic_airplane_takeoff" />
+
+            <TextView
+                android:id="@+id/tv_departure_cities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/iv_departure_icon"
+                android:layout_toRightOf="@id/iv_departure_icon"
+                android:paddingEnd="@dimen/paddingLarge"
+                android:paddingRight="@dimen/paddingLarge"
+                android:textColor="@color/lightGrey"
+                android:textSize="@dimen/textSmall" />
+
+            <ImageView
+                android:id="@+id/iv_arrival_icon"
+                android:layout_width="@dimen/iconWidth"
+                android:layout_height="@dimen/iconHeight"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/iv_departure_icon"
+                android:layout_margin="@dimen/marginLarge"
+                android:contentDescription="@string/cd_arrival_icon"
+                android:src="@drawable/ic_airplane_landing" />
+
+            <TextView
+                android:id="@+id/tv_arrival_cities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_departure_cities"
+                android:layout_toEndOf="@id/iv_arrival_icon"
+                android:layout_toRightOf="@id/iv_arrival_icon"
+                android:paddingEnd="@dimen/paddingLarge"
+                android:paddingRight="@dimen/paddingLarge"
+                android:paddingTop="24dp"
+                android:textColor="@color/lightGrey"
+                android:textSize="@dimen/textSmall" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_one_way_dates_icon"
+                android:layout_width="@dimen/iconWidth"
+                android:layout_height="@dimen/iconHeight"
+                android:layout_marginEnd="@dimen/marginLarge"
+                android:layout_marginRight="@dimen/marginLarge"
+                android:contentDescription="@string/cd_departure_dates"
+                android:src="@drawable/ic_calendar_range" />
+
+            <TextView
+                android:id="@+id/tv_one_way_dates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/iv_one_way_dates_icon"
+                android:layout_toRightOf="@id/iv_one_way_dates_icon"
+                android:paddingEnd="@dimen/paddingLarge"
+                android:paddingRight="@dimen/paddingLarge"
+                android:textColor="@color/lightGrey"
+                android:textSize="@dimen/textSmall" />
+
+            <ImageView
+                android:id="@+id/iv_return_dates_icon"
+                android:layout_width="@dimen/iconWidth"
+                android:layout_height="@dimen/iconHeight"
+                android:layout_alignLeft="@id/iv_one_way_dates_icon"
+                android:layout_alignStart="@id/iv_one_way_dates_icon"
+                android:layout_below="@id/iv_one_way_dates_icon"
+                android:layout_marginEnd="@dimen/marginLarge"
+                android:layout_marginRight="@dimen/marginLarge"
+                android:layout_marginTop="@dimen/marginLarge"
+                android:contentDescription="@string/cd_arrival_dates"
+                android:src="@drawable/ic_calendar_range" />
+
+            <TextView
+                android:id="@+id/tv_return_dates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_one_way_dates"
+                android:layout_alignStart="@id/tv_one_way_dates"
+                android:layout_below="@id/tv_one_way_dates"
+                android:paddingEnd="@dimen/paddingLarge"
+                android:paddingRight="@dimen/paddingLarge"
+                android:paddingTop="24dp"
+                android:textColor="@color/lightGrey"
+                android:textSize="@dimen/textSmall" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_price_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dealButtonHeight"
+        android:layout_marginBottom="@dimen/marginLarge"
+        android:layout_marginEnd="@dimen/marginLarge"
+        android:layout_marginLeft="@dimen/marginLarge"
+        android:layout_marginRight="@dimen/marginLarge"
+        android:layout_marginStart="@dimen/marginLarge"
+        android:background="@drawable/price_button_selector"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>

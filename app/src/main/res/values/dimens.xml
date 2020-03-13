@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cardMarginHorizontal">10dp</dimen>
+    <dimen name="cardMarginVertical">8dp</dimen>
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="appBarLayoutHeight">192dp</dimen>
+    <dimen name="overlapTopValue">64dp</dimen>
+    <dimen name="paddingLarge">16dp</dimen>
+    <dimen name="textMedium">16sp</dimen>
+    <dimen name="marginMedium">8dp</dimen>
+    <dimen name="textSmall">14sp</dimen>
+    <dimen name="paddingMedium">8dp</dimen>
+    <dimen name="textExtraSmall">12sp</dimen>
+    <dimen name="paddingDealType">2dp</dimen>
+    <dimen name="marginLarge">16dp</dimen>
+    <dimen name="iconWidth">25dp</dimen>
+    <dimen name="iconHeight">25dp</dimen>
+    <dimen name="collapsingToolbarHeight">256dp</dimen>
+    <dimen name="toolbarMarginBottom">48dp</dimen>
+    <dimen name="pagerSlidingTabStripMarginBottom">68dp</dimen>
+    <dimen name="pagerStripIndicatorHeight">4dp</dimen>
+    <dimen name="progressBarWidth">52dp</dimen>
+    <dimen name="progressBarHeight">52dp</dimen>
+    <dimen name="dealItemHeight">100dp</dimen>
+    <dimen name="dealButtonHeight">36dp</dimen>
+    <dimen name="tagIconWidth">24dp</dimen>
+    <dimen name="tagIconHeight">24dp</dimen>
+    <dimen name="paddingExtraLarge">22dp</dimen>
+</resources>

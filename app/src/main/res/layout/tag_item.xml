@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?android:listPreferredItemHeight"
+    android:background="?android:selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/iv_is_selected"
+        android:layout_width="@dimen/tagIconWidth"
+        android:layout_height="@dimen/tagIconHeight"
+        android:layout_margin="@dimen/marginLarge"
+        android:contentDescription="@string/cd_tag_icon"
+        android:src="@drawable/ic_tag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tag_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingEnd="@dimen/paddingLarge"
+        android:paddingLeft="@dimen/paddingLarge"
+        android:paddingRight="@dimen/paddingLarge"
+        android:paddingStart="@dimen/paddingLarge"
+        android:paddingTop="@dimen/paddingExtraLarge"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textMedium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/iv_is_selected"
+        app:layout_constraintStart_toEndOf="@id/iv_is_selected"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

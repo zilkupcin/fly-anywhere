@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu_save_deal"
+        android:title="Save deal"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/menu_report_expired"
+        android:title="Report expired deal"
+        app:showAsAction="never"/>
+</menu>

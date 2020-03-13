@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/cardMarginVertical"
+        android:layout_marginEnd="@dimen/cardMarginHorizontal"
+        android:layout_marginLeft="@dimen/cardMarginHorizontal"
+        android:layout_marginRight="@dimen/cardMarginHorizontal"
+        android:layout_marginStart="@dimen/cardMarginHorizontal"
+        android:layout_marginTop="@dimen/cardMarginVertical"
+        app:cardCornerRadius="8dp"
+        android:background="@android:color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/fl_deal_header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dealItemHeight"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_deal_header_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:contentDescription="@string/cd_deal_card_header_image"
+                    android:scaleType="centerCrop" />
+
+
+                <TextView
+                    android:id="@+id/tv_deal_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/paddingLarge"
+                    android:background="@drawable/flight_type_tag_bg"
+                    android:paddingBottom="@dimen/paddingDealType"
+                    android:paddingEnd="@dimen/paddingLarge"
+                    android:paddingLeft="@dimen/paddingLarge"
+                    android:paddingRight="@dimen/paddingLarge"
+                    android:paddingStart="@dimen/paddingLarge"
+                    android:paddingTop="@dimen/paddingDealType"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textExtraSmall" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_deal_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/paddingLarge"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textMedium"
+                android:layout_gravity="start"
+                android:textAlignment="viewStart"
+                android:textDirection="locale"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fl_deal_header" />
+
+            <ImageView
+                android:id="@+id/iv_departure_icon"
+                android:layout_width="@dimen/iconWidth"
+                android:layout_height="@dimen/iconHeight"
+                android:layout_marginEnd="@dimen/marginLarge"
+                android:layout_marginLeft="@dimen/marginLarge"
+                android:layout_marginRight="@dimen/marginLarge"
+                android:layout_marginStart="@dimen/marginLarge"
+                android:contentDescription="@string/cd_arrival_icon"
+                android:src="@drawable/ic_airplane_takeoff"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_deal_title" />
+
+            <TextView
+                android:id="@+id/tv_departure_cities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/paddingLarge"
+                android:paddingLeft="@dimen/paddingLarge"
+                android:paddingRight="@dimen/paddingLarge"
+                android:paddingStart="@dimen/paddingLarge"
+                android:textColor="@color/lightGrey"
+                android:textSize="@dimen/textSmall"
+                app:layout_constraintBottom_toBottomOf="@id/iv_departure_icon"
+                app:layout_constraintLeft_toRightOf="@id/iv_departure_icon"
+                app:layout_constraintStart_toEndOf="@id/iv_departure_icon"
+                app:layout_constraintTop_toTopOf="@id/iv_departure_icon" />
+
+            <ImageView
+                android:id="@+id/iv_arrival_icon"
+                android:layout_width="@dimen/iconWidth"
+                android:layout_height="@dimen/iconHeight"
+                android:layout_margin="@dimen/marginLarge"
+                android:contentDescription="@string/cd_departures_icon"
+                android:src="@drawable/ic_airplane_landing"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_departure_icon" />
+
+            <TextView
+                android:id="@+id/tv_arrival_cities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/paddingLarge"
+                android:paddingLeft="@dimen/paddingLarge"
+                android:paddingRight="@dimen/paddingLarge"
+                android:paddingStart="@dimen/paddingLarge"
+                android:textColor="@color/lightGrey"
+                android:textSize="@dimen/textSmall"
+                app:layout_constraintBottom_toBottomOf="@id/iv_arrival_icon"
+                app:layout_constraintLeft_toRightOf="@id/iv_arrival_icon"
+                app:layout_constraintStart_toEndOf="@id/iv_arrival_icon"
+                app:layout_constraintTop_toTopOf="@id/iv_arrival_icon" />
+
+            <ImageView
+                android:id="@+id/iv_one_way_dates_icon"
+                android:layout_width="@dimen/iconWidth"
+                android:layout_height="@dimen/iconHeight"
+                android:contentDescription="@string/cd_departure_dates"
+                android:src="@drawable/ic_calendar_range"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/tv_deal_title" />
+
+            <TextView
+                android:id="@+id/tv_one_way_dates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/paddingLarge"
+                android:paddingLeft="@dimen/paddingLarge"
+                android:paddingRight="@dimen/paddingLarge"
+                android:paddingStart="@dimen/paddingLarge"
+                android:textColor="@color/lightGrey"
+                android:textSize="@dimen/textSmall"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_one_way_dates_icon"
+                app:layout_constraintStart_toEndOf="@+id/iv_one_way_dates_icon"
+                app:layout_constraintTop_toTopOf="@+id/iv_one_way_dates_icon" />
+
+            <ImageView
+                android:id="@+id/iv_return_dates_icon"
+                android:layout_width="@dimen/iconWidth"
+                android:layout_height="@dimen/iconHeight"
+                android:contentDescription="@string/cd_arrival_dates"
+                android:src="@drawable/ic_calendar_range"
+                app:layout_constraintLeft_toLeftOf="@id/iv_one_way_dates_icon"
+                app:layout_constraintStart_toStartOf="@id/iv_one_way_dates_icon"
+                app:layout_constraintTop_toTopOf="@id/iv_arrival_icon" />
+
+            <TextView
+                android:id="@+id/tv_return_dates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/paddingLarge"
+                android:paddingLeft="@dimen/paddingLarge"
+                android:paddingRight="@dimen/paddingLarge"
+                android:paddingStart="@dimen/paddingLarge"
+                android:textColor="@color/lightGrey"
+                android:textSize="@dimen/textSmall"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_return_dates_icon"
+                app:layout_constraintStart_toEndOf="@+id/iv_return_dates_icon"
+                app:layout_constraintTop_toTopOf="@+id/iv_return_dates_icon" />
+
+            <Button
+                android:id="@+id/btn_price_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dealButtonHeight"
+                android:layout_margin="@dimen/marginLarge"
+                android:background="@drawable/price_button_selector"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_arrival_icon" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
